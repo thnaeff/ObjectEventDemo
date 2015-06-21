@@ -1,12 +1,13 @@
 # ObjectEventDemo
 
-** Graphical display of the component/object tree of an application and visual analyzation of all component events  **
+**Graphical display of the component/object tree of an application and visual analyzation of all component events**
 
 This library can be used to visually analyze the object tree of an application and all component events of a user interface. 
 It started out as a simple project to visualize component boundaries, and ended up as a great tool to see the application 
 structure and watch events happening in real time. Changes in the visible components are reflected in the object tree 
 automatically and no changes to components on an existing application are needed.
 
+![Download and start this demo Java application to try it out](ObjectEventDemo.jar)
 
 
 ## Example
