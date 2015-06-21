@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="img"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GuiUtil"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Util"/>
+	<classpathentry kind="lib" path="/home/thomas/Projects/java_shared/slf4j-1.7.12/slf4j-jdk14-1.7.12.jar"/>
+	<classpathentry kind="lib" path="/home/thomas/Projects/java_shared/slf4j-1.7.12/slf4j-simple-1.7.12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
