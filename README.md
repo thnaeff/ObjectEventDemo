@@ -48,3 +48,16 @@ simply given as parameter in the `ObjectEventDemo` constructor. Any component ca
 parts of an application.
 
 
+## Another Example
+Here is another example of a more complex application user interface. The green borders in the application user interface show 
+which components are selected in the info frame object tree. The frame around the object in the info frame object tree shows 
+which component is hovered with the mouse in the application window.
+
+![A more complex example user interface](ObjectEventDemo_example2.png?raw=true "A more complex example user interface")
+
+![The info frame of the second example](ObjectEventDemo_example2_infopanel.png?raw=true "The info frame of the second example")
+
+
+
+
+
