@@ -142,13 +142,12 @@ public class ObjectEventDemo implements ComponentListener, MouseListener, MouseM
 	 */
 	public void setLayeredPane(JLayeredPane layeredPane) {
 		if (overlayPanel == null) {
-			overlayPanel = new ComponentOverlayPanel();
-			overlayPanel.setOpaque(false);
+			overlayPanel = new ComponentOverlayPanel(layeredPane);
+			overlayPanel.setEventPassThrough(true, true);
+			overlayPanel.setColor(null);
 		} else {
-			layeredPane.remove(overlayPanel);
+			overlayPanel.deactivate();
 		}
-
-		layeredPane.add(overlayPanel, new Integer(JLayeredPane.DEFAULT_LAYER + 1));
 
 		busyOverlay = new BusyOverlay(layeredPane, "Updating object tree...", false);
 		layeredPane.add(busyOverlay, new Integer(JLayeredPane.DEFAULT_LAYER + 2));

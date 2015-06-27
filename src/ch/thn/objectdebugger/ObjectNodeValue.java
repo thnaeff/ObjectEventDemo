@@ -46,17 +46,16 @@ public class ObjectNodeValue {
 	private static int idCounter = 0;
 	private int id = 0;
 
+	/**
+	 * Methods which should be excluded so that they are not invoked at all.
+	 * Methods which do not return a value (return type is void) are automatically
+	 * excluded.
+	 */
 	private static final List<String> excludeMethods = new ArrayList<>();
 	static {
-		excludeMethods.add("");
-		excludeMethods.add("");
-		excludeMethods.add("");
-		excludeMethods.add("toString");
-		excludeMethods.add("wait");
-		excludeMethods.add("hashCode");
-		excludeMethods.add("getClass");
-		excludeMethods.add("notify");
-		excludeMethods.add("notifyAll");
+		//		excludeMethods.add("toString");
+		//		excludeMethods.add("hashCode");
+		//		excludeMethods.add("getClass");
 	}
 
 
@@ -243,8 +242,9 @@ public class ObjectNodeValue {
 				continue;
 			}
 
-			//Only use methods without any parameters
-			if (m.getParameterTypes().length > 0) {
+			//Ignore methods with parameters and methods which do not return
+			//anything
+			if (m.getParameterTypes().length > 0 || m.getReturnType() == void.class) {
 				continue;
 			}
 

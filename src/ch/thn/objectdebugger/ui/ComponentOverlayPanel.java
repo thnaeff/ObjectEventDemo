@@ -13,14 +13,16 @@ import java.awt.font.TextLayout;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
-import javax.swing.JPanel;
+import javax.swing.JLayeredPane;
+
+import ch.thn.guiutil.effects.OverlayPanel;
 
 
 /**
  * @author Thomas Naeff (github.com/thnaeff)
  *
  */
-public class ComponentOverlayPanel extends JPanel {
+public class ComponentOverlayPanel extends OverlayPanel {
 	private static final long serialVersionUID = 6811358824805250141L;
 
 	private ComponentInfo componentInfo = null;
@@ -35,8 +37,11 @@ public class ComponentOverlayPanel extends JPanel {
 	/**
 	 * 
 	 * 
+	 * @param layeredPane
 	 */
-	public ComponentOverlayPanel() {
+	public ComponentOverlayPanel(JLayeredPane layeredPane) {
+		super(layeredPane, true);
+
 		setLayout(null);
 
 	}
