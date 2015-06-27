@@ -150,7 +150,6 @@ public class ObjectEventDemo implements ComponentListener, MouseListener, MouseM
 		}
 
 		busyOverlay = new BusyOverlay(layeredPane, "Updating object tree...", false);
-		layeredPane.add(busyOverlay, new Integer(JLayeredPane.DEFAULT_LAYER + 2));
 
 		doRefresh = true;
 	}
@@ -194,7 +193,7 @@ public class ObjectEventDemo implements ComponentListener, MouseListener, MouseM
 			public void run() {
 
 				updating = true;
-				busyOverlay.setVisible(true, 300);
+				busyOverlay.setVisible(true, 500);
 
 				while (updateRequests > 0) {
 					updateRequests = 0;
