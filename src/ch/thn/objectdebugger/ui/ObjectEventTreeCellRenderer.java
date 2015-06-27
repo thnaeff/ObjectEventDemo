@@ -68,6 +68,9 @@ public class ObjectEventTreeCellRenderer extends DefaultTreeCellRenderer impleme
 
 		JLabel l = null;
 
+		if (node == null) {
+			return new JLabel();
+		}
 
 		if (!labels.containsKey(node.getObject())) {
 			l = new JLabel(value.toString());
